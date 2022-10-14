@@ -1,0 +1,136 @@
+.donation-form__row {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:nth-child(5) {
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+        @include phones {
+          margin-top: 27px;
+        }
+    }
+
+    @include phones {
+      margin-bottom: 4px;
+    }
+}
+
+.donation-form__illustration {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.donation-form__input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+
+    @include tablets {
+      margin-top: 23px;
+    }
+
+    @include phones {
+      margin-top: 0;
+    }
+}
+
+.donation-form__input-text {
+  margin-bottom: 15px;
+  color: #000;
+
+    @include laptop {
+      margin-bottom: 18px;
+    }
+
+    @include carousel-laptop {
+      margin-left: 20px;
+    }
+
+    @include tablets {
+      margin-left: 11px;
+      margin-bottom: 6px;
+    }
+
+    @include phones {
+      margin-left: 0;
+      margin-bottom: 8px;
+    }
+}
+
+.donation-form__input-container {
+  max-width: 976px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.donation-form__another {
+  position: relative;
+  margin-top: 79px;
+  margin-bottom: 5px;
+
+  @include tablets  {
+    margin-bottom: 10px;
+  }
+
+  @include phones {
+    margin-top: 45px;
+    margin-bottom: 22px;
+  }
+}
+
+.donation-form__radio {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  transition: .3s;
+
+    &:last-child {
+      margin-right: 12px;
+
+      @include tablets  {
+        margin-right: 19px;
+      }
+    }
+
+    &:hover {
+      color: #FE9013;
+    }
+}
+
+.donation-form__radio--input {
+  display: none;
+}
+
+.donation-form__radio--point {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #FE9013;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: rgba(#FE9013, 0);
+  transition: .3s;
+}
+
+.donation-form__radio--input:checked + .donation-form__radio--point {
+  background: rgba(#FE9013, 1);
+}
+
+.donation-form__share-friends {
+  text-align: center;
+  margin: 0 -5px;
+}
+
+.donation-form__another--dollar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-35%);
+}

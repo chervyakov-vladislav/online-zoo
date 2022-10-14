@@ -1,0 +1,115 @@
+.choose-your-favorite {
+  margin-top: 64px;
+  padding-bottom: 98px;
+  overflow: hidden;
+  position: relative;
+
+  @include laptop {
+    margin-top: 134px;
+    padding-bottom: 140px;
+  }
+
+  @include tablets {
+    margin-top: 20px; //было 70px
+    padding-bottom: 100px;
+  }
+
+  @include phones {
+    margin-top: 30px;
+    padding-bottom: 60px;
+  }
+
+    &::after {
+      content: '';
+      width: 368px;
+      height: 275px;
+      position: absolute;
+      bottom: 0;
+      right: -5px;
+      background: url('./../images/chooseyourfavorite/strelitzia.png') no-repeat;
+
+        @include backstage {
+          background: url('./../images/chooseyourfavorite/strelitzia-laptop.png') no-repeat;
+          max-width: 241px;
+          max-height: 180px;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          right: 0;
+        }
+
+        @include tablets {
+          max-width: 175px;
+          max-height: 131px;
+          background-size: 175px 131px;
+        }
+
+        @include phones {
+          max-width: 85px;
+          max-height: 71px;
+          background-size: 85px 71px;
+          right: -17px;
+          bottom: -5px;
+        }
+    }
+
+    &::before {
+      content: '';
+      width: 880px;
+      height: 460px;
+      position: absolute;
+      bottom: 0;
+      left: -600px;
+      background: url('./../images/chooseyourfavorite/palm_foto.png') no-repeat;
+
+      @include backstage {
+        max-width: 386px;
+        max-height: 202px;
+        width: 100%;
+        height: 100%;
+        left: -19%;
+        background: url('./../images/chooseyourfavorite/palm_foto-laptop.png') no-repeat;
+      }
+
+      @include tablets {
+        max-width: 385px;
+        max-height: 202px;
+        background-size: 385px 202px;
+        left: -39%;
+      }
+
+      @include phones {
+        max-width: 138px;
+        max-height: 72px;
+        background-size: 138px 72px;
+        left: -77px;
+      }
+    }
+}
+
+.choose-your-favorite__container {
+  flex-direction: column;
+}
+
+.choose-your-favorite__slider {
+  width: 100%;
+}
+
+.choose-your-favorite__button {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include laptop {
+    margin-top: 79px;
+  }
+  
+  @include tablets {
+    margin-top: 60px;
+  }
+
+  @include phones {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,37 @@
+.section {
+  height: 100%;
+  min-height: 650px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  @include laptop {
+    min-height: initial;
+  }
+
+  &--donate {
+    min-height: 470px;
+
+    @include tablets {
+      min-height: initial;
+      height: 368px;
+    }
+
+    @include phones {
+      height: 221px;
+    }
+  }
+
+  &--100vh {
+
+    height: 100vh;
+
+      @include tablets {
+        height: 373px;
+      }
+
+      @include phones {
+        height: 221px;
+      }
+  }
+}

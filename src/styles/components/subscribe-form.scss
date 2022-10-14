@@ -1,0 +1,30 @@
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-form__input {
+  width: 228px;
+  height: 42px;
+  background: transparent;
+  color:  rgba(#fff, .8);
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid $orange;
+  padding: 0 10px;
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px;
+  line-height: 1.2; 
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+}

@@ -1,0 +1,84 @@
+.pet-calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 85px;
+
+    @include carousel-phones {
+      gap: 45px;
+      justify-content: space-between;
+    }
+}
+
+.pet-calculator__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  // убрать на респонсив
+  margin-top: 50px;
+
+  @include phones {
+    margin-top: 31px;
+  }
+}
+
+.pet-calculator__value {
+  @include font-button();
+  font-size: 72px;
+  line-height: 1.1;
+  color: #000;
+
+  @include phones {
+    font-size: 40px;
+    line-height: 32.48px;
+  }
+
+  position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: url('./../images/donate/x_icon.png') center center / contain no-repeat;
+      top: 55%;
+      transform: translateY(-50%);
+      right: -80px;
+
+        @include phones {
+          right: -47px;
+          width: 8px;
+          height: 8px;
+        }
+    }
+}
+
+.pet-calculator__text { 
+  color: $black-blue;
+
+    @include phones {
+      font-size: 9px;
+      line-height: 12.63px;
+      margin-top: 8px;
+    }
+}
+
+.pet-calculator__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.pet-calculator__pic {
+  @include phones {
+    height: 138px;
+    width: 160px;
+  }
+}

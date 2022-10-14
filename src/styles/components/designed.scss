@@ -1,0 +1,10 @@
+.designed__link {
+  color: transparent;
+  padding: 3px;
+  color: #fff;
+  transition: .3s;
+
+  &:hover {
+    color: $orange;
+  }
+}

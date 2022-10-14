@@ -1,0 +1,107 @@
+.backstage {
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  min-height: 660px;
+  
+
+   &::after {
+    content: '';
+    background: url('./../images/backstage/flower_foto1.png') no-repeat;
+    position: absolute;
+    width: 293px;
+    height: 605px;
+    right: -95px;
+    top: 2px;
+
+    @include backstage {
+      display: none;
+    }
+
+    @include tablets {
+      display: block;
+      max-width: 231px;
+      width: 100%;
+      height: 100%;
+      top: -1%;
+      right: -15%;
+      background: url('./../images/backstage/flower_foto1-tablet.png') no-repeat;
+    }
+
+    @include phones {
+      max-width: 105px;
+      max-height: 215px;
+      background: url('./../images/backstage/flower_foto1-phones.png') no-repeat;
+      top: 8%;
+      right: -22%;
+    }
+   }
+}
+
+.backstage__container {
+  margin-top: 120px;
+  margin-bottom: 10px;
+
+  @include laptop {
+    gap: 30px;
+    margin-top: 98px;
+  }
+
+  @include tablets {
+    margin-top: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 60px;
+  }
+
+  @include phones {
+    margin-top: 104px;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+  }
+}
+
+.backstage__image, .backstage__characteristic {
+  width: 50%;
+}
+
+
+.backstage__image {
+  width: 609px;
+  height: 403px;
+  margin-top: 10px;
+  position: relative;
+
+  @include laptop {
+    width: 50%;
+    overflow: hidden;
+    height: 410px;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.backstage__image-pic {
+  @include laptop {
+    position: absolute;
+    right: -18%;
+  }
+}
+
+.backstage__characteristic {
+  max-width: 465px;
+  margin-left: auto;
+
+  @include laptop {
+    max-width: 465px;
+    width: 50%;
+    margin-left: 0;
+  }
+
+  @include tablets {
+    width: 100%;
+    max-width: 495px;
+  }
+}

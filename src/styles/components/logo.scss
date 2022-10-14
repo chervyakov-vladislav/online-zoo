@@ -1,0 +1,89 @@
+.logo {
+  width: 82px;
+  height: 52px;
+  transition: .3s;
+
+  @include tablets {
+    width: 46px;
+    height: 29px;
+  }
+
+  &--phones {
+    @include phones {
+      width: 100%;
+    }
+  }
+}
+
+.logo__text {
+  @include font-smalltext();
+  display: block;
+  color: #fff;
+  border-radius: 2px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: 1px;
+  font-weight: 300;
+  position: relative;
+  font-size: 17px;
+  padding: 2px 1px;
+  transition: .3s;
+
+  @include tablets {
+    font-size: 12px;
+    border: none;
+    line-height: 1.25;
+    letter-spacing: initial;
+  }
+
+    &.logo__text--footer {
+      border: 1px solid rgba($color: #fff, $alpha: .5);
+
+      @include tablets {
+        font-size: 19px;
+        line-height: 22.82px;
+        width: 82px;
+        height: 52px;
+      }
+
+      &::before {
+        min-width: 7px;
+        height: 21px;
+        display: block;
+        position: absolute;
+        bottom: 5px;
+        left: 12px;
+
+        @include phones {
+          bottom: 10px;
+          left: 76px;
+        }
+      }
+
+      @include phones {
+        border: none;
+        width: 130px;
+        height: 100%;
+        padding: 0;
+        margin: 0 auto;
+      }
+    }
+}
+
+.logo__link {
+  text-decoration: none;
+  position: relative;
+}
+
+.logo__icon {
+  position: absolute;
+  bottom: -1px;
+  left: 12px;
+  transition: .3s;
+
+    @include tablets {
+      bottom: 0px;
+      left: 3px;
+    }
+}

@@ -1,0 +1,135 @@
+.offer {
+  display: flex;
+  flex: .8;
+  align-items: center;
+  justify-content: flex-end;
+
+    @include tablets {
+      flex: 1;
+    }
+
+    @include phones {
+      position: relative;
+    }
+}
+
+.offer__container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  max-width: 50%;
+  position: relative;
+
+  @include laptop  {
+    max-width: initial;
+    width: 54%;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    height: 100%;
+    justify-content: center;
+  }
+}
+
+.offer__title {
+  max-width: 500px;
+  width: 100%;
+  @include font-H1();
+  margin-top: 85px;
+  margin-bottom: 60px;
+  color: #fff;
+  font-size: 105px;
+  line-height: 80px;
+  position: relative;
+  z-index: 10;
+  letter-spacing: 1px;
+
+  
+  @include laptop {
+    font-size: 85px;
+    line-height: 63.75px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    letter-spacing: .5;
+  }
+
+  @include tablets {
+    font-size: 54px;
+    line-height: 40.72px;
+    width: 250px;
+    align-self: flex-end;
+    margin-bottom: -8px;
+    pointer-events: none;
+    margin-left: auto;
+  }
+
+  @include phones {
+    font-size: 27.21px;
+    line-height: 20.41px;
+    width: 127px;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 30%;
+    display: block;
+  }
+
+    &::before {
+      content: '';
+      width: 465px;
+      height: 465px;
+      border-radius: 50%;
+      background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);;
+      position: absolute;
+      top: -72px;
+      left: -74px;
+      z-index: -10;
+
+      @include laptop {
+        width: 367px;
+        height: 367px;
+        top: -52px;
+        left: -10px;
+      }
+
+      @include tablets {
+        width: 237px;
+        height: 237px;
+        top: -38px;
+        left: -40px;
+      }
+
+      @include phones {
+        width: 119.09px;
+        height: 119.09px;
+        top: -21px;
+        left: -19px;
+      }
+    }
+
+}
+
+.offer__span {
+  color: $yellow;
+}
+
+.offer__button {
+  @include tablets {
+    width: 50%;
+    align-self: flex-start;
+  }
+
+
+  @include phones {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: -74px;
+  }
+}
+

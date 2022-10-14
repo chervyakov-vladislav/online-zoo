@@ -1,0 +1,176 @@
+.pick-and-feed {
+  background: $orange-gradient;
+
+    &--container {
+      @include tablets {
+        width: 100%;
+      }
+
+      @include phones {
+        width: 94%;
+      }
+    }
+}
+
+.pick-and-feed__donation-page {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 82px;
+
+    @include laptop {
+      margin-bottom: 29px;
+    }
+
+    @include tablets {
+      margin-bottom: 46px;
+    }
+
+    @include phones {
+      margin-bottom: 21px;
+    }
+}
+
+.pick-and-feed__container {
+  background: rgba(253, 253, 255, 0.52);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  width: 100%;
+  margin-top: 70px;
+  margin-bottom: 100px;
+
+  @include laptop {
+    margin-top: 30px;
+    margin-bottom: 48px;
+  }
+
+  @include tablets {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &--donate-page {
+    @include laptop {
+      margin-top: 52px;
+      margin-bottom: 0;
+    }
+
+    @include tablets {
+      margin-top: 41px;
+    }
+
+    @include phones {
+      margin-top: 44px;
+    }
+  }
+}
+
+.pick-and-feed__title {
+  text-align: center;
+  font-size: 48px;
+  color: #FE9013;
+  margin-top: 35px;
+  margin-bottom: 20px;
+
+  @include laptop {
+    margin-top: 25px;
+  }
+
+  @include tablets {
+    font-size: 42px;
+    line-height: 50.4px;
+  }
+
+    &--about-page {
+      margin-bottom: 27px;
+
+      @include laptop {
+        margin-bottom: 17px;
+      }
+
+      @include tablets {
+        margin-top: 10px;
+      }
+
+      @include phones {
+        font-size: 24px;
+        line-height: 28.8px;
+        margin-top: 22px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--donate-page {
+      padding-right: 15px;
+      margin-bottom: 15px;
+
+      @include laptop {
+        margin-top: 15px;
+        margin-bottom: 6px;
+      }
+
+      @include tablets {
+        font-size: 48px;
+        line-height: 57.6px;
+        padding-right: 0;
+        margin-top: 30px;
+        margin-bottom: 23px;
+      }
+
+      @include phones {
+        font-size: 24px;
+        line-height: 28.8px;
+        margin-top: 22px;
+        margin-bottom: 8px;
+      }
+    }
+}
+
+.pick-and-feed__subtitle--donate-page {
+  @include font-subtitle;
+
+    @include laptop {
+      text-align: center;
+    }
+
+    @include phones {
+      font-size: 16px;
+      line-height: 22.4px;
+    }
+
+    @include phones {
+      margin-bottom: 10px;
+    }
+}
+
+.pick-and-feed__content {
+  color: $black-blue;
+
+    &--donate-page {
+      max-width: 976px;
+      width: 100%;
+      margin: 0 auto;
+    }
+}
+
+.pick-and-feed__form {
+  margin-top: 60px;
+  margin-bottom: 60px;
+
+    @include laptop {  
+      max-width: 810px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 56px;
+      margin-bottom: 44px;
+    }
+
+    @include tablets {
+      margin-top: 47px;
+      margin-bottom: 30px;
+    }
+
+    @include phones {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+}

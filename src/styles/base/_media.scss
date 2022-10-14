@@ -1,0 +1,58 @@
+@function rem($px) {
+	@return calc($px / 16px) + 0rem;
+}
+
+@mixin backstage() {
+	@media screen and (max-width: 1550px) {
+			@content;
+	}
+}
+
+
+@mixin carousel__controls() {
+	@media screen and (max-width: 1360px) {
+			@content;
+	}
+}
+
+@mixin laptop() {
+	@media screen and (max-width: 1300px) {
+			@content;
+	}
+}
+
+@mixin carousel-laptop() {
+	@media screen and (max-width: 995px) {
+			@content;
+	}
+}
+
+@mixin tablets() {
+	@media screen and (max-width: 768px) {
+			@content;
+	}
+}
+
+@mixin footer-nav() {
+	@media screen and (max-width: 820px) {
+			@content;
+	}
+}
+
+@mixin carousel-tablets() {
+	@media screen and (max-width: 639px) {
+			@content;
+	}
+}
+
+@mixin phones() {
+	@media screen and (max-width: 600px) {
+			@content;
+	} 
+}
+
+@mixin carousel-phones() {
+	@media screen and (max-width: 340px) {
+			@content;
+	} 
+}

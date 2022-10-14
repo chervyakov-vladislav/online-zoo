@@ -1,0 +1,71 @@
+.socials {
+  @include phones {
+    width: 100%;
+  }
+}
+
+
+.socials__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include phones {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.socials__item {
+  @include tablets {
+    margin-bottom: 11px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+  }
+  
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  max-width: 130px;
+
+  &:hover {
+    .socials__text {
+      color: $orange;
+    }
+    
+    .social-icon {
+      fill: $orange;
+    }
+
+    .socials__image {
+      background: rgba(#fff, .8);
+    }
+  }
+}
+
+.socials__image {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(#C4C4C4, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+}
+
+.socials__text {
+  display: block;
+  margin-left: 10px;
+  transition: .3s;
+
+    @include tablets {
+      display: none;
+    }
+}

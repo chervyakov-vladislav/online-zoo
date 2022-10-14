@@ -1,0 +1,54 @@
+.user-info {
+  display: flex;
+}
+
+.user-info__image {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    margin-right: 8px;
+  }
+
+  @include phones {
+    margin-right: 6px;
+  }
+}
+
+
+.user-info__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-info__name {
+  color: #000;
+
+    @include tablets {
+      line-height: 19.2px;
+    }
+}
+
+.user-info__desc {
+  display: flex;
+  @include font-smalltext();
+  color: #BDBDBD;
+}
+
+.user-info__location {
+  margin-right: 16px;
+  position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: #BDBDBD;
+      border-radius: 50%;
+      width: 3px;
+      height: 3px;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+}

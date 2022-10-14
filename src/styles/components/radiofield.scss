@@ -1,0 +1,53 @@
+.radiofield {
+  width: 100%;
+}
+
+.radiofield__decoration-boldline {
+  max-width: 976px;
+  width: 100%;
+  margin: 0 auto;
+  height: 27px;
+  background: #404950;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include laptop {
+    width: 97%;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+
+  @include phones {
+    height: 13.5px;
+  }
+}
+
+.radiofield__decoration--thinline {
+  max-width: 915px;
+  width: 100%;
+  margin: 0 auto;
+  height: 2px;
+  background: #72828E;
+  position: relative;
+
+  @include laptop {
+    max-width: 650px;
+  }
+
+  @include carousel-laptop {
+    max-width: 650px;
+  }
+
+  @include tablets {
+    max-width: 530px;
+  }
+
+  @include phones {
+    height: 1px;
+    max-width: 262px;
+  }
+}

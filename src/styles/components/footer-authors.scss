@@ -1,0 +1,23 @@
+.footer-authors {
+  opacity: .5;
+  font-family: $font-light-300;
+  max-width: 235px;
+
+    @include phones {
+      font-size: 15px;
+      line-height: 18px;
+    }
+}
+
+.footer-authors__design {
+  margin-bottom: 9px;
+  display: block;
+
+    @include phones {
+      margin-bottom: 13px;
+    }
+}
+
+.footer-authors__company {
+  display: block;
+}
