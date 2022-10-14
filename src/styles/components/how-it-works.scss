@@ -1,0 +1,151 @@
+.how-it-works__container {
+  margin: 0 98px;
+
+    @include laptop {
+      margin: 0 40px 0 50px;
+    }
+
+    @include tablets {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    @include carousel-tablets() {
+      width: 90%;
+    }
+
+    @include phones {
+      width: 95%;
+    }
+}
+
+.how-it-works__title {
+  @include font-subtitle;
+  margin-bottom: 40px;
+
+    @include laptop {
+      margin-bottom: 20px;
+    }
+
+    @include tablets {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
+
+    @include phones {
+      font-size: 18px;
+      line-height: 21.6px;
+      text-align: center;
+    }
+    
+}
+
+.how-it-works__covid {
+  @include font-button();
+  margin-bottom: 8px;
+
+    @include laptop {
+      margin-bottom: 6px;
+    }
+
+    @include tablets {
+      margin-bottom: 9px;
+    }
+
+    @include phones {
+      display: none;
+    }
+}
+
+.how-it-works__text {
+  margin-bottom: 55px;
+
+  @include laptop {
+    margin-bottom: 35px;
+  }
+
+  @include tablets {
+    line-height: 20.8px;
+    margin-bottom: 28px;
+  }
+  
+  @include phones {
+    display: none;
+  }
+}
+
+.how-it-works__illustrtion {
+  @include laptop {
+    margin-right: 10px;
+  }
+
+  @include phones {
+    margin-right: 0;
+  }
+}
+
+.how-it-works__text--decoration {
+  position: relative;
+  color: $black-blue;
+  text-decoration: none;
+  transition: .3s;
+
+  &::after {
+    content: '';
+    width: 178px;
+    height: 1px;
+    background: #FE9013;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    @include carousel-tablets {
+      display: none;
+    }
+  }
+
+  &:hover {
+    color: #FE9013;
+  }
+}
+
+.how-it-works__illustrtion-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+
+    @include tablets {
+      padding-left: 10px;
+      margin-bottom: 18px;
+    }
+
+    @include phones {
+      font-size: 24px;
+      line-height: 28.8px;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+}
+
+.how-it-works__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 63px;
+  margin-bottom: 58px;
+
+   @include laptop {
+    margin-top: 73px;
+    margin-bottom: 53px;
+   }
+
+   @include tablets {
+    margin-top: 40px;
+    margin-bottom: 60px;
+   }
+
+   @include phones {
+    margin-top: 33px;
+    margin-bottom: 40px;
+   }
+}

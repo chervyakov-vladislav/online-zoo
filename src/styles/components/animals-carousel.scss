@@ -1,0 +1,77 @@
+.animals-carousel {
+  width: 100%;
+  max-width: 1158px;
+  position: relative;
+
+    @include laptop {
+      aspect-ratio: initial;
+      max-width: 940px;
+      margin: 0 auto;
+    }
+}
+
+.animals-carousel__container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.animanls-carousel__controls {
+  @include phones {
+    display: none;
+  }
+}
+
+.animanls-carousel__controls--left, .animanls-carousel__controls--right {
+  position: absolute;
+  max-width: 62px;
+  max-height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 45.95%;
+
+    @include tablets {
+      top: 45.5%;
+    }
+}
+
+.animanls-carousel__controls--right {
+  transform: rotate(180deg);
+  right: -80px;
+
+    @include carousel__controls {
+      right: -65px;
+    }
+
+    @include laptop {
+      right: 34.5%;
+    }
+
+    @include tablets {
+      right: 37%;
+    }
+
+    @include carousel-tablets {
+      right: 34.5%;
+    }
+}
+
+.animanls-carousel__controls--left {
+  left: -85px;
+
+  @include carousel__controls {
+    left: -70px;
+  }
+
+  @include laptop {
+    left: 34.5%;
+  }
+
+  @include tablets {
+    left: 37%;
+  }
+
+  @include carousel-tablets {
+    left: 32.5%;
+  }
+}

@@ -1,0 +1,30 @@
+.input {
+  @include font-button();
+  width: 268px;
+  height: 54px;
+  padding: 16px 25px 16px 9px;
+  color: #333B41;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid #929699;
+  background: transparent;
+  position: relative;
+
+  &:focus::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  &:focus::-moz-placeholder {
+    color: transparent;
+  }
+
+  &:focus:-ms-input-placeholder {
+    color: transparent;
+  }
+
+  @include tablets  {
+    width: 182px;
+    height: 41px;
+    padding: 16px 25px 16px 6px;
+  }
+}

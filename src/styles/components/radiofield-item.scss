@@ -1,0 +1,132 @@
+.radiofield-item {
+  position: relative;
+  display: block;
+  max-width: 10px;
+}
+
+.radiofield-item__input {
+  display: none;
+}
+
+.radiofield-item__point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #FFEE2E;
+  display: block;
+  position: relative;
+  transition: .3s;
+
+  @include phones {
+    width: 6px;
+    height: 6px;
+  }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 2px solid #FE9013;
+      top: 50%;
+      left: 50%;
+      transition: .3s;
+      transform: translate(-50%, -50%) scale(0);
+
+      @include phones {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22.95px;
+      height: 22.95px;
+      border-radius: 50%;
+      border: 2px solid #FE9013;
+      top: 50%;
+      left: 50%;
+      transition: .3s;
+      transform: translate(-50%, -50%) scale(0);
+        
+      @include phones {
+        width: 12px;
+        height: 12px;
+      }
+    }
+}
+
+.radiofield-item__text {
+  @include font-button();
+  font-size: 26px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -57px;
+  padding-top: 50px;
+  padding-left: 3px;
+  cursor: pointer;
+  transition: .3s;
+
+    @include laptop {
+      transform: translateX(-50%);
+    }
+
+    @include carousel-laptop {
+      transform: translateX(-50%);
+    }
+
+    @include tablets {
+      transform: translateX(-36%);
+    }
+
+    @include phones {
+      font-size: 13px;
+      line-height: 18.2px;
+      bottom: -29px;
+      padding-top: 30px;
+    }
+}
+
+.radiofield-item__dollar {
+  position: relative;
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   background: url('./../images/donate/Vector.png') center center / contain no-repeat;
+  //   width: 10px;
+  //   height: 20px;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   left: -10px;
+
+  //     @include phones {
+  //       width: 5px;
+  //       height: 10px;
+  //       left: -6px;
+  //     }
+  // }
+}
+
+.radiofield-item__input:checked ~ .radiofield-item__point::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radiofield-item__input:checked ~ .radiofield-item__point::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radiofield-item__input:checked ~ .radiofield-item__text {
+  color: #FE9013;
+}
+
+.radiofield-item__input:checked ~ .radiofield-item__text > .radiofield-item__dollar > .radio-dollar {
+  fill: #FE9013;
+}
+
+.radiofield-item__input:checked ~ .radiofield-item__text > .radiofield-item__dollar::before {
+  background: url('./../images/donate/vector-active.png') center center / contain no-repeat;
+}

@@ -1,0 +1,134 @@
+.animal-card {
+  max-width: 366px;
+  max-height: 426px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #F9804B;
+  cursor: pointer;
+
+  @include laptop {
+    max-width: 293px;
+    max-height: 354px;
+  }
+
+  @include carousel-laptop {
+    max-height: 364px;
+  }
+  
+  @include tablets {
+    max-height: 332px;
+  }
+
+  @include phones {
+    max-width: 285px;
+  }
+
+  &:hover {
+    .animal-card__overlay {
+      bottom: 0;
+    }
+
+    .animal-card__pic {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.animal-card__photo {
+  max-height: 366px;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  @include laptop {
+    max-width: 293px;
+    max-height: 293px;
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  @include tablets {
+    max-width: initial;
+    max-height: 285px;
+  }
+}
+
+.animal-card__pic {
+  transition: .3s;
+  @include laptop {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.animal-card__overlay  {
+  background: rgba(#000, .5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%;
+  left: 0;
+  transition: .3s ease-out;
+}
+
+.animal-card__overlay-text {
+  color: #fff;
+  margin: 50px;
+
+  @include laptop  {
+    margin: 15px;
+  }
+}
+
+
+.animal-card__desc {
+  display: flex;
+  margin: 10px 15px 9px;
+  align-items: center;
+
+    @include tablets {
+      margin: 8px 2px 9px 11px;
+    }
+}
+
+.animal-card__desc-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.animal-card__title {
+  @include font-button;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  line-height: .7;
+
+    @include tablets {
+      font-size: 12.47px;
+    }
+}
+
+.animal-card__location-text {
+  @include font-smalltext;
+  color: #000;
+  line-height: 1.2;
+  margin-top: 4px;
+
+    @include tablets {
+      font-size: 11.69px;
+      margin-top: 2px;
+    }
+}
+
+.animal-card__desc-icon {
+  display: flex;
+  align-items: center;
+
+    & img {
+      width: 80%;
+    }
+}

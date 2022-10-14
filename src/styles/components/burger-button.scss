@@ -1,0 +1,66 @@
+.burger-button {
+  display: none;
+  width: 18px;
+  height: 25px;
+  align-items: center;
+  margin-top: 1px;
+
+    @include tablets {
+      display: flex;
+    }
+
+    &--toggled {
+			> .burger-button__container::before {
+				animation: burg2top 0.4s linear forwards;
+        background: #000;
+			}
+			> .burger-button__container {
+				background: transparent;
+			}
+			> .burger-button__container::after {
+				animation: burg2bottom 0.4s linear forwards;
+        background: #000;
+			}
+		}
+
+		&--unToggled {
+			> .burger-button__container::before {
+				animation: burg2topReset 0.4s linear forwards;
+        background: #fff;
+			}
+			> .burger-button__container {
+				background: #fff;
+			}
+			> .burger-button__container::after {
+				animation: burg2bottomReset 0.4s linear forwards;
+        background: #fff;
+			}
+    }
+}
+
+.burger-button__container {
+  height: 2px;
+  width: 18px;
+  border-radius: 2px;
+  background: #fff;
+  position: relative;
+  transition: background .3s, font-size 0s;
+
+    &::before, &::after {
+      transition: background .3s,font-size 0s;
+      content: '';
+      position: absolute;
+      height: 2px;
+      width: 18px;
+      border-radius: 2px;
+      background: #fff;
+    }
+
+    &::before {
+      margin-top: -4px;
+    }
+
+    &::after {
+      margin-top: 4px;
+    }
+}

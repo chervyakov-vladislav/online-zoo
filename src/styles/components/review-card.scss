@@ -1,0 +1,114 @@
+.review-card {
+  max-width: 266px;
+  height: 387px;
+  width: 100%;
+  border-radius: 20px;
+  // border: 2px solid transparent;
+  background: $light-gray;
+
+  position: relative;
+
+  @include laptop {
+    max-width: 289px;
+    max-height: 387px;
+  }
+
+  @include tablets {
+    max-width: initial;
+    max-height: 105px;
+    width: 100%;
+  }
+
+    &::before {
+      position: absolute;
+      content: '';
+      max-width: 268px;
+      height: 391px;
+      width: 103%;
+      background-image: linear-gradient(to right, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(to right, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);;
+      // background-position: to right;
+      background-size: 200% auto;
+      transition: .5s;
+      border-radius: 20px;
+      z-index: $z-index-10minus;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include laptop {
+        max-width: 293px;
+        max-height: 391px;
+      }
+
+      @include carousel-laptop {
+        width: 102%;
+      }
+
+      @include tablets {
+        max-width: initial;
+        max-height: 109px;
+        width: 101%;
+        border-radius: 25px;
+      }
+
+      @include phones {
+        border-radius: 22px;
+      }
+    }
+
+    &:hover {
+      .review-card::before {
+        background-position: right center;
+      } 
+    }
+
+
+}
+
+.review-card__content {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px 0 8px;
+
+  @include laptop {
+    margin: 12px 20px 0 13px;
+  }
+
+  @include tablets {
+    margin: 12px 20px 0 12px;
+  }
+
+  @include phones {
+    margin: 9px 20px 0 10px;
+  }
+}
+
+.review-card__user-info {
+  margin-bottom: 9px;
+
+  @include tablets {
+    margin-bottom: 12px;
+  }
+
+  @include phones {
+    margin-bottom: 10px;
+  }
+}
+
+.review-card__text {
+  @include font-smalltext;
+  color: $gray;
+  line-height: 18px;
+  padding: 0 2px;
+  max-height: 320px;
+  overflow: scroll;
+  overflow: -moz-scrollbars-none;
+
+    &::-webkit-scrollbar { width: 0; }
+
+    @include tablets {
+      overflow: hidden;
+      max-height: 35px;
+      padding: 0 2px 0 5px;
+    }
+}

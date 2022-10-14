@@ -1,0 +1,128 @@
+.header {
+  min-height: 80px;
+  background: #000;
+  @include font-button();
+  color: #fff;
+  transition: .3s;
+
+  @include laptop {
+    position: relative;
+    z-index: 40;
+  }
+
+  @include tablets {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 34px;
+    background: #111115;
+  }
+
+  &--donate {
+    min-height: 80px;
+    background: #000;
+    @include font-button();
+    color: #fff;
+    padding-top: 15px;
+
+      @include tablets {
+        position: fixed;
+        z-index: 20;
+        padding-top: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        min-height: 34px;
+        background: #111115;
+      }
+  }
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+}
+
+.header__logo {
+  margin-right: 58px;
+  transition: .3s;
+
+  @include laptop {
+    margin-right: 53px;
+  }
+
+  @include tablets {
+    margin-right: 0;
+    padding-top: 1px;
+  }
+}
+
+.header__links {
+  margin-left: auto;
+
+  @include laptop {
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex: .8;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__buttons {
+  @include laptop {
+    padding: 0 5px;
+    flex: 1;
+  }
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__burger {
+  display: none;
+  margin-left: auto;
+
+    @include tablets {
+      display: block;
+    }
+}
+
+
+.header--open {
+  background: #fff;
+  color: #000;
+
+  & .header__logo {
+    padding-top: 10px;
+  }
+
+  & .logo {
+    width: 65px;
+    height: 41px;
+  }
+
+  & .logo__text {
+    color: #FE9013;
+    border: 1px solid #FE9013;
+   }
+
+  & .logo__text::before {
+    display: none;
+  }
+
+  & .bamboo {
+    fill: #FE9013;
+  }
+
+  & .logo__icon {
+    bottom: 1px;
+    left: 12px;
+  }
+}

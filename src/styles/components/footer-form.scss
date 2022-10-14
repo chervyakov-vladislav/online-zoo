@@ -1,0 +1,9 @@
+.footer-form {
+  max-width: 367px;
+  width: 100%;
+}
+
+.footer-form__title {
+  @include font-subtitle();
+  margin-bottom: 15px;
+}

@@ -1,0 +1,150 @@
+.reviews-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.reviews-carousel__list {
+  overflow: hidden;
+  width: 100%;
+  min-height: 400px;
+
+    @include laptop {
+      max-width: 940px;
+    }
+
+    @include tablets {
+      overflow-y: scroll;
+      min-height: initial;
+      max-height: 360px;
+      &::-webkit-scrollbar { width: 0; }
+    }
+}
+
+.reviews-carousel__items {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  transition: .5s;
+  min-height: 400px;
+  padding: 0 2px;
+  width: 100%;
+  position: relative;
+  transition: left 1s;
+  left: 0;
+
+    @include laptop {
+      gap: 23px;
+    }
+
+    @include carousel-laptop {
+      gap: 15px;
+    }
+
+    @include tablets {
+      flex-direction: column;
+      padding-top: 3px;
+      gap: 20px;
+    }
+}
+
+.reviews-carousel__item {
+  display: flex;
+  align-items: center;
+
+  min-width: 23%;
+
+  @include laptop {
+    min-width: 32%;
+  }
+
+  @include tablets {
+    min-width: initial;
+    width: 100%;
+    min-height: 32%;
+  }
+
+    &:nth-child(1) {
+      @include laptop {
+        order: -4;
+      }
+    }
+
+    &:nth-child(2) {
+      @include laptop {
+        order: 2;
+      }
+    }
+
+    &:nth-child(3) {
+      @include laptop {
+        order: -1;
+      }
+    }
+
+    &:nth-child(4) {
+      @include laptop {
+        order: -2;
+      }
+    }
+}
+
+.reviews-carousel__controls {
+  margin-top: 8px;
+
+    @include tablets {
+      display: none;
+    }
+}
+
+.reviews-carousel__input {
+  width: 600px;
+  height: 8px;
+  background: $light-gray;
+  -webkit-appearance: none;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+
+  @include laptop {
+    width: 388px;
+  }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 602px;
+      height: 10px;
+      background: $pink-grdient;
+      border-radius: 5px;
+      z-index: $z-index-10minus;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include laptop {
+        width: 390px;
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 115px;
+      height: 6px;
+      border-radius: 5px;
+      background-image: linear-gradient(to right, #F9804B 0%, #fcb558 51%, #F9804B 100%);
+      background-size: 200% auto;
+      transition: .5s;
+
+        &:hover {
+          background-position: right center;
+        }
+
+        @include laptop {
+          width: 70px;
+        }
+    }
+}

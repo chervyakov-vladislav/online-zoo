@@ -1,0 +1,26 @@
+.hello-section {
+  background: url('../images/mainsection/panda_great.png') center center / cover no-repeat;
+}
+
+.hello-section__container {
+  flex-direction: column;
+
+    @include phones {
+      width: 94%;
+    }
+}
+
+.hello-section--donate {
+  background: url('../images/donate/panda_great.png') 50% 45% / cover no-repeat;
+  min-height: 500px;
+
+    @include laptop {
+      background-size: 156%;
+      background-position: 27% 43%;
+    }
+
+    @include phones {
+      background-size: 250%;
+      background-position: 34% 44%;
+    }
+}

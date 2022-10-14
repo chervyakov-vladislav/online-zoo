@@ -1,0 +1,61 @@
+.donation-information {
+  color: #fff;
+  margin-top: 35px;
+  margin-bottom: -15px;
+
+  @include laptop {
+    margin-top: 38px;
+  }
+
+  @include tablets {
+    margin-top: 30px;
+  }
+}
+
+.donation-information__title {
+  text-transform: uppercase;
+  font-size: 36px;
+  margin-bottom: 8px;
+
+  @include laptop {
+    padding-right: 100px;
+    margin-bottom: 25px;
+  }
+
+  @include tablets {
+    font-size: 24px;
+    line-height: 28.8px;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.donation-information__text {
+  @include font-button;
+  margin-bottom: 45px;
+
+  @include tablets {
+    margin-bottom: 28px;
+  }
+
+  @include phones {
+    line-height: 21.7px;
+    margin-bottom: 32px;
+  }
+}
+
+.donation-information__span {
+  @include font-default;
+  padding-right: 3px;
+}
+
+.donation-information__subtitle {
+  font-size: 36px;
+  color: #FE9013;
+  margin-bottom: 0;
+
+    @include phones {
+      font-size: 24px;
+      line-height: 28.8px;
+    }
+}
