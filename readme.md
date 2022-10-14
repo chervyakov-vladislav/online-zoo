@@ -1,5 +1,9 @@
 <a href="./spec.md" target="_blank">Техническое задание</a>
 
+
+**<a href="https://chervyakov-vladislav.github.io/online-zoo/online-zoo/" target="_blank">ссылка на deploy</a>**
+https://chervyakov-vladislav.github.io/online-zoo/online-zoo/
+
 Проект сделан в рамках курса в <a href="https://rollingscopes.com/" target="_blank">rollingscopes.com</a>
 
 Основные задачи:
